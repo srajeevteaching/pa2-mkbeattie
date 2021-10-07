@@ -7,11 +7,17 @@
 
 monthStr = input("Enter a month: ")
 month = int(monthStr)
-year = input()
+yearStr = input("Enter a year: ")
+year = int(yearStr)
 if month == 1:
     mDays = 31
 elif month == 2:
-    mDays = 28
+    if year % 4 == 0:
+        year_isLeapYear = True
+        mDays = 29
+    else:
+        year_isLeapYear = False
+        mDays = 28
 elif month == 3:
     mDays = 31
 elif month == 4:
@@ -33,13 +39,5 @@ elif month == 11:
 elif month == 12:
     mDays = 31
 else:
-    print("invalid month entry1")
-print("You entered month # ", month, ". There are ", mDays, " days in that month.")
-
-yearStr = input("Enter a year: ")
-year = int(yearStr)
-if year % 100 == 0:
-    if year % 4 == 0:
-        year_isLeapYear = True
-else:
-    year_isLeapYear = False
+    print("invalid month entry!")
+print("There are ", mDays, " days in that month.")
