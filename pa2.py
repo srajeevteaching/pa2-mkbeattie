@@ -2,7 +2,7 @@
 # CS151, Dr. Rajeev
 # October 6, 2021
 # Programming Assignment 2
-# Program Inputs: month that user enters
+# Program Inputs: month and year that user enters
 # Program Outputs: number of days in the month (including leap year cases)
 
 monthStr = input("Enter a month: ")
